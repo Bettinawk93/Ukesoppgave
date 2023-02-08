@@ -12,10 +12,10 @@
     Velg farge
     <p>
     <div class="fargebokser">
-    <div id="Red" style="background-color:pink;" onclick="selectColor(this.style.backgroundColor)"></div>
-    <div id="Green" style="background-color:lightgray;" onclick="selectColor(this.style.backgroundColor)"></div>
-    <div id="Blue" style="background-color:gray;" onclick="selectColor(this.style.backgroundColor)"></div>
-    <div id="Brown" style="background-color:black;" onclick="selectColor(this.style.backgroundColor)"></div>  
+    <div id="Pink" style="background-color:rgb(255, 192, 203);" onclick="selectColor(this.style.backgroundColor)"></div>
+    <div id="Lightgray" style="background-color:rgb(211, 211, 211);" onclick="selectColor(this.style.backgroundColor)"></div>
+    <div id="Gray" style="background-color:rgb(128, 128, 128);" onclick="selectColor(this.style.backgroundColor)"></div>
+    <div id="Darkgray" style="background-color:rgb(169, 169, 169);" onclick="selectColor(this.style.backgroundColor)"></div>  
     </div>
 
     <p>
@@ -24,65 +24,61 @@
 
         Tegn her!
 
-    <div class="Boxes">
-    <div id="box" onclick="fargelegg()"></div>
-    <div id="box"></div>
-    <div id="box"></div>
-    <div id="box"></div>   
-    <div id="box"></div>
-    <div id="box"></div>
+    <div id="Boxes">
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;" onclick="fargelegg()"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;" onclick="fargelegg()"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;" onclick="fargelegg()"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;" onclick="fargelegg()"></div>   
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;" onclick="fargelegg()"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;" onclick="fargelegg()"></div>
     
 
-    <div id="box"></div>
-    <div id="box"></div>
-    <div id="box"></div>
-    <div id="box"></div>
-    <div id="box"></div>
-    <div id="box"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;"onclick="fargelegg()"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;"onclick="fargelegg()"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;"onclick="fargelegg()"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;"onclick="fargelegg()"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;"onclick="fargelegg()"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;"onclick="fargelegg()"></div>
 
-    <div id="box"></div>
-    <div id="box"></div>
-    <div id="box"></div>
-    <div id="box"></div>
-    <div id="box"></div>
-    <div id="box"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;"onclick="fargelegg()"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;"onclick="fargelegg()"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;"onclick="fargelegg()"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;"onclick="fargelegg()"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;"onclick="fargelegg()"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;"onclick="fargelegg()"></div>
 
-    <div id="box"></div>
-    <div id="box"></div>
-    <div id="box"></div>
-    <div id="box"></div>
-    <div id="box"></div>
-    <div id="box"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;"onclick="fargelegg()"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;"onclick="fargelegg()"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;"onclick="fargelegg()"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;"onclick="fargelegg()"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;"onclick="fargelegg()"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;"onclick="fargelegg()"></div>
 
-    <div id="box"></div>
-    <div id="box"></div>
-    <div id="box"></div>
-    <div id="box"></div>
-    <div id="box"></div>
-    <div id="box"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;"onclick="fargelegg()"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;"onclick="fargelegg()"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;"onclick="fargelegg()"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;"onclick="fargelegg()"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;"onclick="fargelegg()"></div>
+    <div class="box" style="background-color: white; border: 1px solid black; padding: 20px;"onclick="fargelegg()"></div>
 
 
 </div>
 
 <style>
 
-.Boxes{
+#Boxes{
     display: grid;
-    grid-template-columns: 50px 50px 50px 50px 50px 50px;
+    grid-template-columns: repeat(6,50px);
 
 }
 
-#box {
-    border: 1px solid black;
-    padding: 20px;
-}
 
 .fargebokser{
     display: grid;
     grid-template-columns: repeat(4, 100px);
     column-gap: 10px;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
         
 }
 
@@ -101,7 +97,11 @@
   function selectColor(color) {
   document.getElementById('selectedColor').style.backgroundColor = color;
 }
-    
+
+    function fargelegg() {
+    document.getElementsByClassName('box').style.backgroundColor = selectedColor.style.backgroundColor;
+  
+}
 
 </script>
 </body>
