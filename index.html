@@ -13,17 +13,15 @@
 
     Velg farge
     <p>
-        <button id="btn" onclick="farger()">Fargevalg</button>
-    <p>
     <div class="fargebokser" id="farge"> </div>
     <p>
     <div id="selectedColor">Valgt farge</div>
     <br>
-    <br>
+
 
     Lag fargefelt og tegn her!
     <p>
-        <button id="btn2" onclick="fargefelt()">Lag fargefelt</button>
+
     <div id="boxes">
     </div>
 
@@ -53,6 +51,10 @@
             text-align: center;
 
         }
+
+        .box {
+            border: 1px solid black;
+        }
     </style>
     <script>
 
@@ -64,76 +66,23 @@
             box.style.backgroundColor = selectedColor.style.backgroundColor;
         }
 
-        let clickState = 0;
-
-        function farger(id, color) {
-            clickState++;
-
-            if (clickState == 1) {
-                const id = ['pink'];
-                const color = ['pink'];
+        let colors = ['pink', 'gray', 'darkgray', 'lightgray'];
+        leggTilFargePalett(colors);
 
 
-                document.getElementById('farge').innerHTML += `<div id="${id}"
-                    style="background-color: ${color}"
-                    onclick="selectColor(this.style.backgroundColor)"></div>`;
+        for (let i = 0; i < 30; i++)
+            lagFargefelt();
 
 
-            } else if (clickState == 2) {
-                const id = ['gray'];
-                const color = ['gray'];
-
-                document.getElementById('farge').innerHTML += `<div id="${id}"
-                    style="background-color: ${color}"
-                    onclick="selectColor(this.style.backgroundColor)"></div>`;
-
-            } else if (clickState == 3) {
-                const id = ['darkgray'];
-                const color = ['darkgray'];
-
-
-                document.getElementById('farge').innerHTML += `<div id="${id}"
-                    style="background-color: ${color}"
-                    onclick="selectColor(this.style.backgroundColor)"></div>`;
-
-            } else if (clickState == 4) {
-                const id = ['lightgray'];
-                const color = ['lightgray'];
-
-
-                document.getElementById('farge').innerHTML += `<div id="${id}"
-                    style="background-color: ${color}"
-                    onclick="selectColor(this.style.backgroundColor)"></div>`;
-
-                document.getElementById('btn').disabled = true;
-
+        function leggTilFargePalett(color) {
+            for (let i = 0; i < colors.length; i++) {
+                document.getElementById('farge').innerHTML += `<div style="background-color:${colors[i]}"
+                onclick="selectColor(this.style.backgroundColor)"></div>`;
             }
-
         }
 
-
-        function fargefelt() {
-
-
-            for (let i = 0; i < 30; i++) {
-
-                const id = ['box'];
-                const color = ['white'];
-                const border = ['1px solid black'];
-                const padding = ['20px'];
-
-                document.getElementById('boxes').innerHTML += `<div id="${id}"
-                    style="background-color: ${color}; border: ${border}; padding: ${padding};"
-                    onclick="fargelegg(this)"></div>`;
-
-                if (i > 2)
-                    document.getElementById('btn2').disabled = true;
-
-            }
-
-
-
-
+        function lagFargefelt() {
+            document.getElementById('boxes').innerHTML += `<div id="box"  onclick="fargelegg(this)"  class="box"</div>`;
 
         }
     </script>
